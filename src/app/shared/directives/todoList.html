@@ -1,0 +1,12 @@
+<md-input-container>
+  <label>New Todo</label>
+  <input type="text" ng-model="newItemText">
+</md-input-container>
+<md-button class="md-primary" ng-click="addNewItem()">Add</md-button>
+<md-list>
+  <md-list-item ng-repeat="todo in list track by $index">
+    <md-checkbox ng-model="todo.checked" aria-label="Checkbox"></md-checkbox>
+    {{ todo.text }}
+  </md-list-item>
+</md-list>
+<md-button class="md-raised md-accent" ng-click="removeItems()">Remove Selected</md-button>
